@@ -8,9 +8,7 @@ export default function Home() {
       <p> This is a place where you can find all the NPCs you need for your game. </p>
       <p> You can find the NPCs by searching for them in the search bar or by clicking on the categories on the left. </p>
 
-      <Link href="/login">
-        <a> Login</a>
-      </Link>
+      <Link href="/login">Login</Link>
     
     </main>
   )
