@@ -1,0 +1,85 @@
+/* Reset some default styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Set your preferred font and font-size for the entire app */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Apply a background color to the entire page */
+body {
+  background-color: #f0f0f0;
+}
+
+/* Add some padding to the page content */
+#__next {
+  padding: 20px;
+}
+
+/* Style links with a different color and remove underlines */
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+/* Style links on hover */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Apply a box shadow to images */
+img {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some margin to headings for spacing */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+}
+
+/* Style buttons */
+button {
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0054a5;
+}
+
+/* Add a custom class for a container element if needed */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Add your custom styles here as needed */
+
+/* Example: Center an element horizontally and vertically */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
