@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 'use client';
 
-=======
->>>>>>> b53a0355dc2f85aed967787077e5a4cb2708351f
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image' //optimized image loading
