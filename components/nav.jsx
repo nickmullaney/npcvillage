@@ -6,6 +6,7 @@ import Image from 'next/image' //optimized image loading
 import Logo from '@/assets/images/logo.png'
 import { useState, useEffect } from 'react'
 import {signIn, signOut, useSession, getProviders} from 'next-auth/react';
+import { Avatar } from '@mui/material';
 
 const nav = () => {
   return (
@@ -15,13 +16,12 @@ const nav = () => {
           <Image className='rounded-lg m-2' src={Logo} width={100} height={50} />
         
       </Link>
-      <Link href="/">Home</Link>
       <Link href="/about" className=''>About</Link>
-      <Link href="/myCharacters">My Characters</Link>
+      <Link href="/app/myCharacters">My Characters</Link>
       <Link href="/login">Login</Link>
-      <Link href="/api/auth/signin">Sign In</Link>
-      <Link href="/api/auth/signout">Sign Out</Link>
-      <Link href="/api/auth/session">Session</Link>
+      <Avatar src="https://avatars.githubusercontent.com/u/7525670?v=4" />
+      {/* <Link href="/api/auth/signin">Sign In</Link>
+      <Link href="/api/auth/signout">Sign Out</Link> */}
     </nav>
 
   )
