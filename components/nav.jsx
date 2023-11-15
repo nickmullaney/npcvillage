@@ -17,7 +17,7 @@ const nav = () => {
         
       </Link>
       <Link href="/about" className=''>About</Link>
-      <Link href="/app/myCharacters">My Characters</Link>
+      <Link href="/myCharacters">My Characters</Link>
       <Link href="/login">Login</Link>
       <Avatar src="https://avatars.githubusercontent.com/u/7525670?v=4" />
       {/* <Link href="/api/auth/signin">Sign In</Link>
