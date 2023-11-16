@@ -1,7 +1,5 @@
 //  /api/users
-
 export async function GET(request) {
-
 // Handle the GET request for /api/users
 // Retrieve users from the database
 
