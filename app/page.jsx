@@ -1,17 +1,83 @@
-import Link from 'next/link'
+// pages/index.js
+'use client'
+import React, { useState } from 'react';
 
-export default function Home() {
+const Home = () => {
+  const [campaignDescription, setCampaignDescription] = useState({
+    campaignStyle: '',
+    campaignFeel: '',
+    magicLevel: '',
+    // Add more prompts as needed
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setCampaignDescription((prevDescription) => ({
+      ...prevDescription,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Submit the campaign description to your backend or perform actions based on the user's input
+  };
+
   return (
-    <section className='w-full flex-center flex-col'>
-      <h1 className='head_text text-center blue_gradient height=auto'> NPC Village</h1>
+    <div>
+      <h1>Campaign Description</h1>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="campaignStyle">Campaign Style:</label>
+          <select
+            name="campaignStyle"
+            id="campaignStyle"
+            value={campaignDescription.campaignStyle}
+            onChange={handleInputChange}
+          >
+            <option value="">Select a style</option>
+            <option value="High Fantasy">High Fantasy</option>
+            <option value="Steampunk">Steampunk</option>
+            {/* Add more style options */}
+          </select>
+        </div>
 
-      <br className='max-md:hidden' />
+        <div>
+          <label htmlFor="campaignFeel">Campaign Feel:</label>
+          <select
+            name="campaignFeel"
+            id="campaignFeel"
+            value={campaignDescription.campaignFeel}
+            onChange={handleInputChange}
+          >
+            <option value="">Select a feel</option>
+            <option value="Epic">Epic</option>
+            <option value="Mysterious">Mysterious</option>
+            {/* Add more feel options */}
+          </select>
+        </div>
 
-      <p> This is a place where you can find all the NPCs you need for your game. </p>
-      <p> You can find the NPCs by searching for them in the search bar or by clicking on the categories on the left. </p>
+        <div>
+          <label htmlFor="magicLevel">Magic Level:</label>
+          <select
+            name="magicLevel"
+            id="magicLevel"
+            value={campaignDescription.magicLevel}
+            onChange={handleInputChange}
+          >
+            <option value="">Select a magic level</option>
+            <option value="High">High</option>
+            <option value="Low">Low</option>
+            {/* Add more magic level options */}
+          </select>
+        </div>
 
-      <Link href="/login">Login</Link>
+        {/* Add more prompts as needed */}
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+};
 
-    </section>
-  )
-}
+export default Home;

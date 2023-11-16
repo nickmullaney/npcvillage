@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image' //optimized image loading
-import Logo from '@/assets/images/logo.png'
+import Logo from '@/public/assets/images/logo.png'
 import { useState, useEffect } from 'react'
 import {signIn, signOut, useSession, getProviders} from 'next-auth/react';
 import { Avatar } from '@mui/material';

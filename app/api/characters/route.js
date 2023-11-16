@@ -1,13 +1,15 @@
-export async function GET(request) {
-  return new Response('Hello there');
-}
+// pages/api/characters.js
 
-export async function HEAD(request: Request){ }
+import { NextApiRequest, NextApiResponse } from 'next';
+import connectToDatabase from '../../utils/db'; // A utility to connect to your database
 
-export async function POST(request: Request) { }
-
-export async function PUT(request: Request) { }
-
-export async function DELETE(request: Request) { }
-
-export async function PATCH(request: Request) { }
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  try {
+    const db = await connectToDatabase(); // Establish a database connection
+    const characters = await db.collection('characters').find({}).toArray(); // Retrieve all characters
+    res.status(200).json(characters);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+};
